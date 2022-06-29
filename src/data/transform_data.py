@@ -6,7 +6,11 @@ def transform_data():
     tiene como columnas la fecha en formato YYYY-MM-DD y las horas H00, ...,
     H23.
 
-    """
+"""
+
+    # La intención de la siguiente función es convertir los documentos del datalake que se encuentran en formato excel
+    # a documentos tipo csv. Esto se hace a partir de el uso de lectura de datos con las funciones read xls y to csv.
+
     import pandas as pd
 
     for i in range(1995, 2022):
