@@ -7,10 +7,25 @@ def transform_data():
     H23.
 
     """
-    raise NotImplementedError("Implementar esta función")
+    import pandas as pd
+
+    for i in range(1995, 2022):
+        if i in range(2016, 2018):
+            data_xls = pd.read_excel(
+                'data_lake/landing/{}.xls'.format(i), index_col=None, header=None)
+            data_xls.to_csv('data_lake/raw/{}.csv'.format(i),
+                            encoding='utf-8', index=False, header=False)
+        else:
+            data_xls = pd.read_excel(
+                'data_lake/landing/{}.xlsx'.format(i), index_col=None, header=None)
+            data_xls.to_csv('data_lake/raw/{}.csv'.format(i),
+                            encoding='utf-8', index=False, header=False)
+
+    # raise NotImplementedError("Implementar esta función")
 
 
 if __name__ == "__main__":
     import doctest
 
     doctest.testmod()
+    transform_data()
