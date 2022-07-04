@@ -55,7 +55,7 @@ def make_forecasts():
     precios_diarios['pronostico'] = y_m2
 
     precios_diarios.to_csv(
-        'data_lake/business/forescasts/precios-diarios.csv', index=False,  encoding='utf-8')
+        'data_lake/business/forecasts/precios-diarios.csv', index=False,  encoding='utf-8')
 
     #raise NotImplementedError("Implementar esta función")
 
