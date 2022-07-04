@@ -12,10 +12,30 @@ def make_features():
     analizar y determinar las variables explicativas del modelo.
 
     """
-    raise NotImplementedError("Implementar esta función")
+    #raise NotImplementedError("Implementar esta función")
+
+    import pandas as pd
+
+    precios_diarios = pd.read_csv('data_lake/business/precios-diarios.csv')
+    precios_diarios['Variable_dependiente'] = 0
+    for i in range(9393, 9409):
+        precios_diarios.iloc[i, 2] = precios_diarios.iloc[i, 1]
+        precios_diarios.iloc[i, 1] = 0
+
+    precios_diarios.to_csv(
+        'data_lake/business/features/precios_diarios.csv', index=False, encoding='utf-8')
+
+
+def test_answer():
+    import os
+
+    assert os.path.isfile(
+        'data_lake/business/features/precios_diarios.csv') is True
 
 
 if __name__ == "__main__":
     import doctest
 
     doctest.testmod()
+
+    make_features()

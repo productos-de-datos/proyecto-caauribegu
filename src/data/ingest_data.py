@@ -1,5 +1,10 @@
 """
 Módulo de ingestión de datos.
+
+La función a continuación busca generar la ingesta de los datos a la carpeta datalake/datalanding que se crea con la función anterior
+
+    La función se encarga de descargar los archivos consecutivamente teniendo en cuenta los años de creación de cada uno y utilizando
+    un ciclo for y la libreria requests para poder realizar está tarea. De igual forma se abren los archivos xls y se accede con wget.
 -------------------------------------------------------------------------------
 """
 
@@ -12,11 +17,6 @@ def ingest_data():
     archivos de precios de bolsa nacional en formato xls a la capa landing. La
     descarga debe realizarse usando únicamente funciones de Python.
     """
-
-    # La función a continuación busca generar la ingesta de los datos a la carpeta datalake/datalanding que se crea con la función anterior
-
-    # La función se encarga de descargar los archivos consecutivamente teniendo en cuenta los años de creación de cada uno y utilizando
-    # un ciclo for y la libreria requests para poder realizar está tarea. De igual forma se abren los archivos xls y se accede con wget.
 
     import requests as req
 
@@ -31,7 +31,6 @@ def ingest_data():
                 i)
             file = req.get(url, allow_redirects=True)
             open('data_lake/landing/{}.xlsx'.format(i), 'wb').write(file.content)
-
 
     #raise NotImplementedError("Implementar esta función")
 if __name__ == "__main__":

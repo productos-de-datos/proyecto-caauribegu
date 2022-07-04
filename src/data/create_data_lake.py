@@ -1,3 +1,14 @@
+
+"""
+Creación del DataLake
+----------------------------------------------------------------------------------------------------------------------------
+
+    El motivo de la función es la creación del "datalake" que se tiene dispuesto a utilizar en la realización del producto de datos. 
+    Se crean las carpetas mostradas anteriormente y se ejecuta en la rama donde se quiera crear la carpeta. 
+    
+    """
+
+
 def create_data_lake():
     """Cree el data lake con sus capas.
 
@@ -20,12 +31,6 @@ def create_data_lake():
 
 
     """
-
-
-
-# El motivo de la función es la creación del "datalake" que se tiene dispuesto a utilizar en la realización del producto de datos. 
-# Se crean las carpetas mostradas anteriormente y se ejecuta en la rama donde se quiera crear la carpeta. 
-
 
     from os import mkdir
 
