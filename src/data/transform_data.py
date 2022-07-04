@@ -47,6 +47,38 @@ def transform_data():
     # raise NotImplementedError("Implementar esta función")
 
 
+def test_answer():
+    import os
+
+    assert os.path.isfile("data_lake/raw/1995.csv") is True
+    assert os.path.isfile("data_lake/raw/1996.csv") is True
+    assert os.path.isfile("data_lake/raw/1997.csv") is True
+    assert os.path.isfile("data_lake/raw/1998.csv") is True
+    assert os.path.isfile("data_lake/raw/1999.csv") is True
+    assert os.path.isfile("data_lake/raw/2000.csv") is True
+    assert os.path.isfile("data_lake/raw/2001.csv") is True
+    assert os.path.isfile("data_lake/raw/2002.csv") is True
+    assert os.path.isfile("data_lake/raw/2003.csv") is True
+    assert os.path.isfile("data_lake/raw/2004.csv") is True
+    assert os.path.isfile("data_lake/raw/2005.csv") is True
+    assert os.path.isfile("data_lake/raw/2006.csv") is True
+    assert os.path.isfile("data_lake/raw/2007.csv") is True
+    assert os.path.isfile("data_lake/raw/2008.csv") is True
+    assert os.path.isfile("data_lake/raw/2009.csv") is True
+    assert os.path.isfile("data_lake/raw/2010.csv") is True
+    assert os.path.isfile("data_lake/raw/2011.csv") is True
+    assert os.path.isfile("data_lake/raw/2012.csv") is True
+    assert os.path.isfile("data_lake/raw/2013.csv") is True
+    assert os.path.isfile("data_lake/raw/2014.csv") is True
+    assert os.path.isfile("data_lake/raw/2015.csv") is True
+    assert os.path.isfile("data_lake/raw/2016.csv") is True
+    assert os.path.isfile("data_lake/raw/2017.csv") is True
+    assert os.path.isfile("data_lake/raw/2018.csv") is True
+    assert os.path.isfile("data_lake/raw/2019.csv") is True
+    assert os.path.isfile("data_lake/raw/2020.csv") is True
+    assert os.path.isfile("data_lake/raw/2021.csv") is True
+
+
 if __name__ == "__main__":
     import doctest
 
