@@ -68,7 +68,7 @@ def train_daily_model():
     # Entrenamiento
     mlp.fit(X[0:9383], data_d1d12_scaled[0:9383])
 
-    filename = 'models/precios-diarios.pkl'
+    filename = 'src/models/precios-diarios.pkl'
     pickle.dump(mlp, open(filename, 'wb'))
 
     #raise NotImplementedError("Implementar esta función")
